@@ -1,0 +1,172 @@
+:root {
+	font-size: 62.5%;
+
+	--main-color: #e1e1e1;
+	--black: #1e1e1e;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 100vh;
+	font-family: 'Poppins', sans-serif;
+	padding: 2rem;
+	background: rgba(0,0,0,0.15);
+	background-image: url("../background.png");
+	background-blend-mode: multiply;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* HEADER */
+
+header .github-link {
+	font-size: 3rem;
+	display: flex;
+	align-items: center;
+	color: var(--main-color);
+	gap: 1rem;
+	opacity: 0.7;
+}
+
+.github-link .text {
+	font-weight: 300;
+}
+
+.github-link .text strong {
+	font-weight: 600;
+}
+
+.github-link .icon {
+	display: flex;
+}
+
+/* MAIN */
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main .picture-link {
+	position: relative;
+	opacity: 0.7;
+}
+
+.picture-link .icon {
+	display: flex;
+	font-size: 3rem;
+	color: var(--main-color);
+}
+
+.informations {
+	position: relative;
+}
+
+.informations.active .picture-link {
+	opacity: 1;
+}
+
+.informations.active .informations-body {
+	display: flex;
+}
+
+.informations-body {
+	display: none;
+	background: var(--main-color);
+	padding: 0.4rem;
+	border-radius: 1rem;
+	position: absolute;
+	box-shadow: 0 10px 10px -5px rgba(0,0,0,0.5);
+	left: 50%;
+	width: max-content;
+	transform: translateX(-50%);
+}
+
+.informations-body a {
+	display: flex;
+	align-items: center;
+	font-size: 1.8rem;
+	color: var(--black);
+	padding: 0.6rem 1rem;
+	border-radius: 0.6rem;
+	gap: 0.5rem;
+	transition: background 150ms ease
+}
+
+.informations-body a:hover {
+	background: #bfbfbf;
+}
+
+.informations-body a .user {
+	font-weight: 600;
+}
+
+.informations-body a .icon {
+	display: flex;
+	font-size: 2.6rem;
+}
+
+.time-div .hour {
+	display: flex;
+	font-size: 8rem;
+	align-items: center;
+	line-height: 120%;
+	color: var(--main-color);
+}
+
+.time-div .hour .number {
+	font-weight: 100;
+}
+
+.date-div {
+	font-size: 3.2rem;
+	color: var(--main-color);
+}
+
+/* FOOTER */
+footer .mantra {
+	text-align: center;
+	font-size: 1.6rem;
+	color: var(--main-color);
+}
+
+/* - */
+
+.github-link,
+.picture-link {
+	transition: opacity 150ms ease;
+}
+
+.github-link:hover,
+.picture-link:hover {
+	opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+	header .github-link {
+		font-size: 2.2rem;
+	}
+
+	main .time-div .hour {
+		font-size: 6rem;
+	}
+
+	main .date-div {
+		font-size: 2.4rem;
+	}
+
+	footer .mantra {
+		font-size: 1.4rem;
+	}
+}
