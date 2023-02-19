@@ -91,6 +91,7 @@ main .picture-link {
 	left: 50%;
 	width: max-content;
 	transform: translateX(-50%);
+	animation: riseIn 150ms ease backwards;
 }
 
 .informations-body a {
@@ -141,7 +142,14 @@ footer .mantra {
 	color: var(--main-color);
 }
 
-/* - */
+/* Globals */
+
+.informations-body .user,
+.icon,
+i {
+	pointer-events: none;
+	user-select: none;
+}
 
 .github-link,
 .picture-link {
@@ -168,5 +176,19 @@ footer .mantra {
 
 	footer .mantra {
 		font-size: 1.4rem;
+	}
+}
+
+@keyframes riseIn {
+	from {
+		transform: translateX(-50%) translateY(-5%);
+		opacity: 0;
+	}
+}
+
+@keyframes riseOut {
+	to {
+		transform: translateX(-50%) translateY(-5%);
+		opacity: 0;
 	}
 }
