@@ -10,10 +10,15 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<title>Welcome</title>
 	<link rel="stylesheet" href="css/welcomeui.css">
+
+	<script defer src="js/background.js"></script>
+	<script defer src="js/dateAndTime.js"></script>
+	<script defer src="js/imageInformations.js"></script>
+	<script defer src="js/welcomeui.js"></script>
 </head>
 <body>
 	<header>
-		<a href="#" class="github-link">
+		<a href="https://github.com/LiarleyCodie" target="_blank" class="github-link">
 			<span class="icon">
 				<i class='bx bxl-github'></i>
 			</span>
@@ -25,15 +30,15 @@
 
 	<main>
 		<div class="informations" id="informations">
-			<a href="#" class="picture-link" id="pictureLink">
+			<a href="#" class="picture-link" target="_blank" id="pictureLink">
 				<span class="icon">
 					<i class='bx bx-image-alt'></i>
 				</span>
 			</a>
 			<div class="informations-body" id="informationsBody">
-				<a href="#" class="link-to-unsplash" id="linkToUnsplash">
+				<a href="#" class="link-to-unsplash" target="_blank" id="linkToUnsplash">
 					Photo by 
-					<span class="user">
+					<span class="user" id="user">
 						Nice Guy
 					</span>
 					<span class="icon">
@@ -79,6 +84,5 @@
 			Não faça mudanças drasticas porque elas não se sustentam.
 		</p>
 	</footer>
-	<script src="js/welcomeui.js"></script>
 </body>
 </html>
